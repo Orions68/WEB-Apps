@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Averiguar Mayor/Menor</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Mi hija de estilos. -->
+</head>
+<body>
+    <h1>Averiguar de la siguiente tabla cual es el número mayor y si hay números iguales</h1>
+    <h2>Por Favor introduce los números de la tabla.</h2>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <hr>
+    <p>El Número mayor es el que corresponde a la casilla: <span id="mayor"></span></p>
+    <p>El siguiente mayor es: <span id="menosMayor"></span></p>
+    <p>En esta fila: <span id="igual"></span> iguales.</p>
+    <script src="js/script.js"></script> <!-- Mi Script -->
+    <script>calcular();</script> <!-- Llamo a la función del script. -->
+</body>
+</html>

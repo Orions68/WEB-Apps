@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pórtico</title>
+    <!-- Estilos de Fontawesome y Bootstrap. -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet"> <!-- Mi hoja de Estilos. -->
+</head>
+<body>
+    <div class="container-fluid pt-3"> <!-- Contenedor By Bootstrap. -->
+        <!-- Barra de Navegación entre las páginas, queda fija arriba en la pantalla siempre, está dentro de una fila con dos columnas, By Bootstrap. -->
+        <div class="row"> <!-- Dispone de una fila con dos columnas, una de 9 celdas para el menú de navegación y otra con 3 celdas para seleccionar el idioma, entrar en el sitio o registrarse. -->
+            <nav class="navbar navbar-expand-md navbar fixed-top bg-white">
+                <div class="col-sm-9"> <!-- Columnas con el menú de navegación. -->
+                <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+                    <!-- la función onclick la uso para poner la variable counter según la página que se esté visualizando. -->
+                    <a class="nav-link" aria-current="page" href="index.html#pageTop" onclick="counter=0" aria-selected="false" role="tab" aria-controls="nav-contact">Inicio</a>
+                    <a class="nav-link" aria-current="page" href="index.html#services" onclick="counter=1" aria-selected="false" role="tab" aria-controls="nav-contact">Servicios</a>
+                    <a class="nav-link" aria-current="page" href="index.html#rooms" onclick="counter=2" aria-selected="false" role="tab" aria-controls="nav-contact">Comodidades</a>
+                    <a class="nav-link" aria-current="page" href="index.html#restaurant" onclick="counter=3" aria-selected="false" role="tab" aria-controls="nav-contact">Restaurante</a>
+                    <a class="nav-link" aria-current="page" href="index.html#relax" onclick="counter=4" aria-selected="false" role="tab" aria-controls="nav-contact">Relax</a>
+                    <a class="nav-link" aria-current="page" href="contacto.html" target="_blank" aria-selected="false" role="tab" aria-controls="nav-contact">Contacto</a>
+                </div>
+                </div>
+                <div class="col-sm-3 nav-tabs"> <!-- Columnas con las celdas para el idioma, entrada y registro. -->
+                <select class="selectpicker" data-width="fit" name="languageSelector" title="Language Selector">
+                    <option data-content='<span class="flag-icon flag-icon-us"></span> Español'>Español</option>
+                    <option data-content='<span class="flag-icon flag-icon-mx"></span> English'>English</option>
+                </select>
+                <button class="btn btn-light ms-3">Login</button>
+                <button class="btn btn-light ms-3">Registrate</button>
+                </div>
+            </nav>
+        </div> <!-- Fin de la Fila. -->
+
+        <div id="pageTop" onwheel="navigate(event)"> <!-- Div con el ID pageTop, contiene la primera página que se ve con el logo y el título del Hotel. -->
+            <br><br>
+            <header>      
+              <!-- Jumbotron, esto es de Bootstrap, incluye un título y la imágen del Hotel. -->
+              <!-- Background image -->
+              <div class="p-5 text-center bg-image" style="background-image: url('img/logo.jpg'); height: 700px;">
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <div class="text-white">
+                    <h1 class="mb-3">Bienvenidos al Hotel Pórtico.</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!-- Jumbotron -->
+            </header>
+        </div>
+
+        <div class="separator" id="services" onwheel="navigate(event)"><br><br><br><br><br><br> <!-- Div con el ID sevices, los servicios que brinda el Hotel y una imagen, segunda pantalla. -->
+            <div class="row"> <!-- Está compuesto por una fila con 2 columnas de 5 celdas cada una, para que se vea centrado en la pantalla, tiene un margen de 10%. -->
+                <div class="col-sm-5" style="margin-left: 10%;">
+                    <h3>Algunos de los servicios que ofrecemos incluyen:</h3>
+                    <ul>
+                        <li>Transporte desde y hacia el aeropuerto.</li>
+                        <li>Check in online, recibirá un código QR en su móvil con el que podrá acceder directamente a su habitación, máxima discreción.</li>
+                        <li>Aceptamos todas las tarjetas de credito y débito, todos los medios de pago online, Paypal, Bizum y también aceptamos Bitcoin u otro tipo de Crypto Moneda.</li>
+                        <li>Todas nuestras Habitaciones tienen vista al mar y a la piscina, las camas cuentan con colchones de la última tecnología.</li>
+                        <li>El desayuno está incluido y cuenta con una variedad de frutas de todo tipo, charcutería de calidad y la repostería es artesanal, masas, panes, pasteles.</li>
+                        <li>Contamos con habitaciones exclusivas para no fumadores, jamás olerá a humo en tu habitación, además estas y los pasillos cuentan con un sistema de aire con filtros EPA que limpian el aire de malos olores así como virus y vacterias.</li>
+                        <li>Excursiones a los puntos más atractivos de la isla.</li>
+                        <li>Servicio de habitaciones.</li>
+                    </ul>
+                </div>
+                <div class="col-sm-5">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/van.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/invitado-reservando-recorrido-hotel_53876-15229.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/invitado-reservando-recorrido-hotel_53876-25199.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Siguiente</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator" id="rooms" onwheel="navigate(event)"><br><br><br><br><br><br> <!-- Div con el ID rooms, los servicios que brinda el Hotel y una imagen, tercera pantalla. -->
+            <div class="row"><!-- Está compuesto por una fila con 2 columnas de 5 celdas cada una, para que se vea centrado en la pantalla, tiene un margen de 10%. -->
+                <div class="col-sm-5" style="margin-left: 10%;">
+                    <h3>Las Habitaciones están pensadas para que tengas total intimidad:</h3>
+                    <ul>
+                        <li>Acceso Directo a y desde la Playa y la Pisccina.</li>
+                        <li>Los cristales tiene un tratamiento tanto de espejo como de opacidad, tu puedes ver en todo momento hacia fuera, pero nadie que pase cerca o confunda su habitación podrá ver dentro.</li>
+                        <li>El edificio cuenta con 4 ascensores, el acceso a las habitaciones por el pasillo es muy discreto también.</li>
+                        <li>Los colchones con la última tecnología, también hacen masajes y movimientos ondulantes simulando una cama de agua.</li>
+                        <li>Servicio de habitaciones las 24 Hs..</li>
+                    </ul>
+                </div>
+                <div class="col-sm-5">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/interior-sitio-alojamiento-comodo_1232-1822.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/diseno-apartamento-estudio-moderno-dormitorio-sala-estar_1262-12375.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/ama-casa-limpiando-habitacion-hotel_53876-30786.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Siguiente</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator" id="restaurant" onwheel="navigate(event)"><br><br><br><br><br><br> <!-- Div con el ID sevices, los servicios que brinda el Hotel y una imagen, cuarta pantalla. -->
+            <div class="row"><!-- Está compuesto por una fila con 2 columnas de 5 celdas cada una, para que se vea centrado en la pantalla, tiene un margen de 10%. -->
+                <div class="col-sm-5" style="margin-left: 10%;">
+                    <h3>El Hotel cuenta con 2 Restaurantes y 2 snack bar:</h3>
+                    <ul>
+                        <li>El snack bar Big pool está en el centro de la piscina central.</li>
+                        <li>El restaurante <em>Ho Chi Min</em> cuenta con comidas asiáticas de todo tipo.</li>
+                        <li>El Restaurante Eifel, recoge los sabores de la alta cocina Francesa así como todo tipo de dieta occidental y Americana.</li>
+                        <li>Ambos restaurantes dan servicio a veganos y vegetarianos así como a personas con intolerancias alimentícias.</li>
+                        <li>Servicio de los restaurantes esta disponible las 24 Hs. con servicio en las habitaciones.</li>
+                        <li>En nuestros snack bar también podrás disfrutar de riquísimas bebidas preparadas por bartenders internacionales las 24 Hs.</li>
+                    </ul>
+                </div>
+                <div class="col-sm-5">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/cocinar-salsa-plato-ensalada_23-2148040163.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/camarera-vino-tinto-vaso-sobre-mesa-restaurante_2313-314.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/camarero-sonriente-hermoso-que-sostiene-bandeja-champan_13339-34350.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/chef-espolvoreando-especias-sobre-plato-preparado_23-2147863787.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/comida-buffet_74190-4138.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Siguiente</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator" id="relax" onwheel="navigate(event)"><br><br><br><br><br><br> <!-- Div con el ID sevices, los servicios que brinda el Hotel y una imagen, quinta pantalla. -->
+            <div class="row"><!-- Está compuesto por una fila con 2 columnas de 5 celdas cada una, para que se vea centrado en la pantalla, tiene un margen de 10%. -->
+                <div class="col-sm-5" style="margin-left: 10%;">
+                    <h3>Nuestras zonas de Relax:</h3>
+                    <ul>
+                        <li>En la Gran piscina central y las piscinas circundantes, puedes dar un paseo en flotadores gracias a la suave corriente del agua.</li>
+                        <li>Contamos con un Spa con jacuzzi, ducha suiza, baño turco.</li>
+                        <li>Sala de masajes, para todos los tipo de masajes, piedras calientes, zen.</li>
+                        <li>El gimnasio no es precisamente una lugar para el relax, aunque es un espacio completo para los que no pueden dejar ni un minuto de estar en forma.</li>
+                        <li>Todos estos servicios están disponibles las 24 Hs.</li>
+                    </ul>
+                </div>
+                <div class="col-sm-5">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/primer-plano-mujer-mascarilla-facial_1122-1350.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/sombrilla-silla-alrededor-hermosa-piscina-lujo_74190-2034.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/isla-maldivas_74190-477.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/cielo-vacaciones-natacion-hermoso-mar_1203-4989.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/terapeuta-masaje-spa_53876-41075.jpg" class="d-block w-100" alt="Playa">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Siguiente</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br>
+        <footer class="text-center text-lg-start bg-light text-muted"> <!-- El Footer by Bootstrap, para los iconos se usa el CSS de pro.fontawesome.com. -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Conecta con Nosotros en Redes Sociales:</span>
+                </div>
+                <!-- Left -->
+            
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"> Facebook</i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"> Twitter</i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"> Google</i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"> Instagram</i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"> LinkedIn</i>
+                    </a>
+                    <a href="mailto:info@domain.com" class="me-4 text-reset">
+                    <i class="far fa-envelope"> E-mail</i>
+                    </a>
+                </div>
+                <!-- Right -->
+                </section>
+                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                    All Offers © 2022 Hotel Pórtico. WEB Design © 2022 César Osvaldo Matelat Borneo.
+                </div>
+        </footer> <!-- Fin del Footer -->
+        </div>
+    </div>
+    <script>var counter = 0;</script> <!-- La variable counter la pongo a 0, se usa para contar las páginas que se muestran en la pantalla. -->
+    <script src="js/functions.js"></script> <!-- Mis funciones en javascript. -->
+    <script>screenSize();</script> <!-- Llama a la función para igualar todas las pantallas a la altura disponible en el navegador. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <!-- Script de Bootstrap. -->
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* Estilo para los enlaces <a>, les quito la decoración, ya que si no se ve una pequeña raya al lado de los iconos de Facebook, E-mail, etc. */
+a
+{
+    text-decoration: none;
+}
+
+/* Modifíco el ancho de las imágenes para que sea más responsivo, si las dejo al 100% la imagen no se adpta a los distintos tamaños de pantalla, le doy un 5% de margen a la izquierda para centrarla.*/
+img
+{
+    width: 90%;
+    margin-left: 5%;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Viajes Espaciales</title>
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC">
+    <script>var counter = 0;</script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid pt-3">
+        <div class="row">
+            <nav class="navbar navbar-expand-md navbar fixed-top bg-white">
+              <div class="col-sm-8">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+                  <a class="nav-link" aria-current="page" href="#pageTop" onclick="counter=0" aria-selected="false" role="tab" aria-controls="nav-contact">Inicio</a>
+                  <a class="nav-link" aria-current="page" href="#moon" onclick="counter=1" aria-selected="false" role="tab" aria-controls="nav-contact">Viajes a la Luna</a>
+                  <a class="nav-link" aria-current="page" href="#mars" onclick="counter=2" aria-selected="false" role="tab" aria-controls="nav-contact">Viajes a Marte</a>
+                  <a class="nav-link" aria-current="page" href="#other" onclick="counter=3" aria-selected="false" role="tab" aria-controls="nav-contact">Viaje Sorpresa</a>
+                </div>
+              </div>
+              <div class="col-sm-4 nav-tabs">
+                <select class="selectpicker" data-width="fit" name="languageSelector" title="Language Selector">
+                  <option data-content='<span class="flag-icon flag-icon-us"></span> Español'>Español</option>
+                  <option data-content='<span class="flag-icon flag-icon-mx"></span> English'>English</option>
+                </select>
+                <button class="btn btn-light ms-3">Login</button>
+                <button class="btn btn-light ms-3">Registrate</button>
+              </div>
+            </nav>
+        </div>
+        <div id="pageTop" onwheel="navigate(event)">
+            <br><br>
+            <header>      
+              <!-- Jumbotron -->
+              <!-- Background image -->
+              <div class="p-5 text-center bg-image" style="background-image: url('img/logo.png'); height: 700px;">
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <div class="text-white">
+                    <h1 class="mb-3">Agencia de Viajes Interplanetaria.</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!-- Jumbotron -->
+            </header>
+        </div>
+        <div class="separator" id="moon" onwheel="navigate(event)"><br><br><br><br><br><br>
+            <div class="row">
+                <div class="col-sm-5" style="margin-left: 10%;">
+                    <h3>El viaje a la Luna ofrece una aventura sin igual, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</h3>
+                </div>
+                <div class="col-sm-5">
+                    <img alt="moon" src="img/moon.jpg">
+                </div>
+            </div>
+            <div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Contacta con Nosotros
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Contacta con Nosotros</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Escanea el código QR para Contactar con Nosotros por WhatsApp o al Número: 555 55 5555</p>
+                            <img alt="Whatsapp" src="img/whatsapp.jpg">
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator" id="mars" onwheel="navigate(event)"><br><br><br><br><br><br>
+            <div class="row">
+                <div class="col-sm-5" style="margin-left: 10%;">
+                    <h3>El viaje a Marte ofrece una aventura sin igual, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</h3>
+                </div>
+                <div class="col-sm-5">
+                    <img alt="moon" src="img/mars.jpg">
+                </div>
+            </div>
+            <div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Contacta con Nosotros
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Contacta con Nosotros</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Escanea el código QR para Contactar con Nosotros por WhatsApp o al Número: 555 55 5555</p>
+                            <img alt="Whatsapp" src="img/whatsapp.jpg">
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator" id="other" onwheel="navigate(event)"><br><br><br><br><br><br>
+            <div class="row">
+                <div class="col-sm-5" style="margin-left: 10%;">
+                    <h3>Nuestro viaje sorpresa es a Júpiter, el paneta que cuenta con más de 70 lunas de las cuales podrás visitar Io, Europa, Calisto y Ganimedes, donde los habitantes de esta última te esperarán con guirnaldas de flores autóctonas y un cocktail de bienvenida y te aseguramos que no se parece en nada a cuando fuiste a Hawaii. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</h3>
+                </div>
+                <div class="col-sm-5">
+                    <img alt="moon" src="img/Jupiter.jpg">
+                </div>
+                <div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Contacta con Nosotros
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Contacta con Nosotros</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Escanea el código QR para Contactar con Nosotros por WhatsApp o al Número: 555 55 5555</p>
+                                <img alt="Whatsapp" src="img/whatsapp.jpg">
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <footer class="text-center text-lg-start bg-light text-muted">
+                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                    <!-- Left -->
+                    <div class="me-5 d-none d-lg-block">
+                        <span>Conecta con Nosotros en Redes Sociales:</span>
+                    </div>
+                    <!-- Left -->
+                
+                    <!-- Right -->
+                    <div>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"> Facebook</i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"> Twitter</i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"> Google</i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-instagram"> Instagram</i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"> LinkedIn</i>
+                        </a>
+                        <a href="mailto:info@domain.com" class="me-4 text-reset">
+                        <i class="far fa-envelope"> E-mail</i>
+                        </a>
+                    </div>
+                    <!-- Right -->
+                    </section>
+                    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                        All Offers © 2022 The Agency. WEB Design © 2022 César Osvaldo Matelat Borneo.
+                    </div>
+            </footer>
+        </div>
+    <script src="js/functions.js"></script>
+    <script>screenSize();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacta con el Hotel Pórtico</title>
+    <!-- Estilos de Fontawesome y Bootstrap. -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet"> <!-- Mi hoja de Estilos. -->
+</head>
+<body>
+
+    <!-- Barra de Navegación entre las páginas, queda fija arriba en la pantalla siempre, está dentro de una fila con dos columnas, By Bootstrap. -->
+    <div class="row"> <!-- Dispone de una fila con dos columnas, una de 9 celdas para el menú de navegación y otra con 3 celdas para seleccionar el idioma, entrar en el sitio o registrarse. -->
+        <nav class="navbar navbar-expand-md navbar fixed-top bg-white">
+            <div class="col-sm-9"> <!-- Columnas con el menú de navegación. -->
+            <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+                <a class="nav-link" aria-current="page" href="index.html#pageTop" onclick="counter=0" aria-selected="false" role="tab" aria-controls="nav-contact">Inicio</a>
+                <a class="nav-link" aria-current="page" href="index.html#services" onclick="counter=1" aria-selected="false" role="tab" aria-controls="nav-contact">Servicios</a>
+                <a class="nav-link" aria-current="page" href="index.html#rooms" onclick="counter=2" aria-selected="false" role="tab" aria-controls="nav-contact">Comodidades</a>
+                <a class="nav-link" aria-current="page" href="index.html#restaurant" onclick="counter=3" aria-selected="false" role="tab" aria-controls="nav-contact">Restaurante</a>
+                <a class="nav-link" aria-current="page" href="index.html#relax" onclick="counter=4" aria-selected="false" role="tab" aria-controls="nav-contact">Relax</a>
+                <a class="nav-link" aria-current="page" href="#" aria-selected="false" role="tab" aria-controls="nav-contact">Contacto</a>
+            </div>
+            </div>
+            <div class="col-sm-3 nav-tabs"> <!-- Columnas con las celdas para el idioma, entrada y registro. -->
+            <select class="selectpicker" data-width="fit" name="languageSelector" title="Language Selector">
+                <option data-content='<span class="flag-icon flag-icon-us"></span> Español'>Español</option>
+                <option data-content='<span class="flag-icon flag-icon-mx"></span> English'>English</option>
+            </select>
+            <button class="btn btn-light ms-3">Login</button>
+            <button class="btn btn-light ms-3">Registrate</button>
+            </div>
+        </nav>
+    </div>
+
+    <div id="pageTop"> <!-- ID de la primera pantalla, se vé el título con el logo del Hotel. -->
+        <br><br>
+        <header>      
+          <!-- Jumbotron, esto es de Bootstrap, incluye un título y la imágen del Hotel. -->
+          <!-- Background image -->
+          <div class="p-5 text-center bg-image" style="background-image: url('img/logo.jpg'); height: 550px;">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white">
+                <h1 class="mb-3">Bienvenidos al Hotel Pórtico.</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- Jumbotron -->
+        </header>
+    </div>
+
+    <div class="row"> <!-- UNa fila con 3 clumnas de 3, 6 y 3 celdas, para centrar el formulario en la pantalla. -->
+    <div class="col-sm-3"></div> <!-- 3 celdas vacias a la izquierda. -->
+    <div class="form col-sm-6 mb-3"> <!-- Columna de 6 celdas para el formulario. -->
+        <h2>Formulario de Contacto</h2>
+        <h5>Danos algunos datos y nos pondremos en contacto contigo por el medio que Tú elijas.</h5>
+        <form action="#" method="post" name="contacto">
+
+            <label class="form-label">Nombre: </label>
+            <input type="text" placeholder="Por favor escribe tu nombre" name="name" class="form-control" aria-describedby="nameHelp"><br><br>
+
+            <label class="form-label">Teléfono: </label>
+            <input type="number" placeholder="Danos tu número" name="phone" class="form-control" aria-describedby="phoneHelp"><br><br>
+
+            <label for="exampleInputEmail1" class="form-label">Email: </label>
+            <input type="email" placeholder="Tú E-mail Por Favor" name="email" class="form-control" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Nunca compartiremos tus datos con nadie.</div><br>
+
+            <label class="form-label">Via de contacto:
+                <select name="way">
+                    <option value="" selected>Escoge una opción</option>
+                    <option value="phone">Por Teléfono</option>
+                    <option value="whatsapp">Por WhatsApp</option>
+                    <option value="email">Por E-mail</option>
+                </select></label><br><br>
+            <label class="form-label">Envia tus datos: <input type="submit" value="Enviar!"></label>
+        </form>
+    </div>
+    <div class="col-sm-3"></div> <!-- 3 celdas vacias a la derecha. -->
+    </div>
+
+        <footer class="text-center text-lg-start bg-light text-muted"> <!-- El Footer by Bootstrap, para los iconos se usa el CSS de pro.fontawesome.com. -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Conecta con Nosotros en Redes Sociales:</span>
+                </div>
+                <!-- Left -->
+            
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"> Facebook</i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"> Twitter</i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"> Google</i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"> Instagram</i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"> LinkedIn</i>
+                    </a>
+                    <a href="mailto:info@domain.com" class="me-4 text-reset">
+                    <i class="far fa-envelope"> E-mail</i>
+                    </a>
+                </div>
+                <!-- Right -->
+                </section>
+                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                    All Offers © 2022 Hotel Pórtico. WEB Design © 2022 César Osvaldo Matelat Borneo.
+                </div>
+        </footer> <!-- Fin del Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

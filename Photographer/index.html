@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playas del Mundo</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>var counter = 0;</script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid pt-3">
+      <div class="row">
+      <nav class="navbar navbar-expand-md navbar fixed-top bg-white">
+        <div class="col-sm-10">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+            <a class="nav-link" aria-current="page" href="#pageTop" onclick="counter=0" aria-selected="false" role="tab" aria-controls="nav-contact">Inicio</a>
+            <a class="nav-link" aria-current="page" href="#photos" onclick="counter=1" aria-selected="false" role="tab" aria-controls="nav-contact">África, América, Antartida</a>
+            <a class="nav-link" aria-current="page" href="#photos2" onclick="counter=2" aria-selected="false" role="tab" aria-controls="nav-contact">Asia, Europa, Oceanía</a>
+            <a class="nav-link" aria-current="page" href="#other" onclick="counter=3" aria-selected="false" role="tab" aria-controls="nav-contact">Playas de Otros Mundos</a>
+            <a class="nav-link" aria-current="page" href="mailto:info@domain.com" aria-selected="false" role="tab" aria-controls="nav-contact">Contactar</a>
+          </div>
+        </div>
+        <div class="col-sm-2 nav-tabs">
+          <select class="selectpicker" data-width="fit" name="languageSelector" title="Language Selector">
+            <option data-content='<span class="flag-icon flag-icon-us"></span> Español'>Español</option>
+            <option data-content='<span class="flag-icon flag-icon-mx"></span> English'>English</option>
+          </select>
+          <button class="btn btn-light ms-3">Login</button>
+          <button class="btn btn-light ms-3">Registrate</button>
+        </div>
+      </nav>
+      </div>
+      <div id="pageTop" onwheel="navigate(event)">
+        <br><br>
+        <header>      
+          <!-- Jumbotron -->
+          <!-- Background image -->
+          <div class="p-5 text-center bg-image" style="background-image: url('img/logo.jpg'); height: 500px;">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white">
+                <h1 class="mb-3">Playas del Mundo y Más Allá</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- Jumbotron -->
+        </header>
+  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <!-- <p class="navbar-brand" href="#">Menú</p> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Selecciona un Continente
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="africa.html" target="_blank">África</a></li>
+                    <li><a class="dropdown-item" href="america.html" target="_blank">América</a></li>
+                    <li><a class="dropdown-item" href="asia.html" target="_blank">Asia</a></li>
+                    <li><a class="dropdown-item" href="europa.html" target="_blank">Europa</a></li>
+                    <li><a class="dropdown-item" href="oceania.html" target="_blank">Oceanía</a></li>
+                    <li><a class="dropdown-item" href="antartida.html" target="_blank">Antártida</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="planets.html" target="_blank">Otras Playas del Universo</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" action="index.html" method="get">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="separator" id="photos" onwheel="navigate(event)"><br><br><br><br><br><br>
+        <div class="row">
+            <div class="col-sm-4">
+              <h3>Playas de África</h3>
+              <a id="africa" href="africa.html" target="_blank"><img alt="África" src="img/africa/africa.jpg"></a>
+            </div>
+            <div class="col-sm-4">
+              <h3>Playas de América</h3>
+              <a href="america.html" target="_blank"><img alt="América" src="img/america/america.jpg"></a>
+            </div>
+            <div class="col-sm-4">
+              <h3>Playas de Antártida</h3>
+              <a href="antartida.html" target="_blank"><img alt="Antártida" src="img/antartida/antartida.jpeg"></a>
+            </div>
+          </div>
+        </div>
+        <div class="separator" id="photos2" onwheel="navigate(event)"><br><br><br><br><br><br>
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Playas de Asia</h3>
+              <a href="asia.html" target="_blank"><img alt="Asia" src="img/asia/asia.jpg"></a>
+            </div>
+            <div class="col-sm-4">
+                <h3>Playas de Europa</h3>
+                <a href="europa.html" target="_blank"><img alt="Europa" src="img/europa/europa.jpg"></a>
+            </div>
+            <div class="col-sm-4">
+                <h3>Playas de Oceanía</h3>
+                <a href="oceania.html" target="_blank"><img alt="Oceanía" src="img/oceania/oceania.jpg"></a>
+            </div>
+          </div>
+          </div>
+        <br>
+        <br>
+        <div id="other" onwheel="navigate(event)"><br><br><br><br><br><br>
+          <div class="row">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-6">
+                  <h3 style="text-align: center;">Playas de Otros Mundos</h3>
+                  <a id="planets" href="planets.html" target="_blank"><img alt="Otros Planetas" src="img/planets/planet1.jpg"></a>
+              </div>
+              <div class="col-sm-3"></div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <footer class="text-center text-lg-start bg-light text-muted">
+              <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                  <!-- Left -->
+                  <div class="me-5 d-none d-lg-block">
+                      <span>Conecta con Nosotros en Redes Sociales:</span>
+                  </div>
+                  <!-- Left -->
+              
+                  <!-- Right -->
+                  <div>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-facebook-f"> Facebook</i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-twitter"> Twitter</i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-google"> Google</i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-instagram"> Instagram</i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-linkedin"> LinkedIn</i>
+                      </a>
+                      <a href="mailto:info@domain.com" class="me-4 text-reset">
+                      <i class="far fa-envelope"> E-mail</i>
+                      </a>
+                  </div>
+                  <!-- Right -->
+                  </section>
+                  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                      All Images © 2022 The Photographer. WEB Design © 2022 César Osvaldo Matelat Borneo.
+                  </div>
+          </footer>
+        </div>
+    </div>
+    <script src="js/functions.js"></script>
+    <script>screenSize();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
